@@ -74,10 +74,12 @@ final class CronnerTests: XCTestCase {
         
         cronner.resume()
 
+        // Main thread needs to be occupied in order to let `Cronner` operate in another one asynchronously.
         while (run) {
             
             if Date() > timeout {
                 run = false
+                cronner.pause()
                 XCTAssert(false) // Forces test to fail when conditions are not met in given time
             }
             
