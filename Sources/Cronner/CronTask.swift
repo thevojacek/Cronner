@@ -30,7 +30,7 @@ public protocol CronTask {
     var taskName: String { get }
     
     /// Determines, whether task will be run just once, or if it is being periodically executed.
-    var runOnlyOnce: Bool { get } // TODO: rename ??
+    var runOnlyOnce: Bool { get }
     
     /// Determines, whether to run task immediately after registration, or to wait to a next schedule.
     var runImmediately: Bool { get }
@@ -43,7 +43,7 @@ public protocol CronTask {
     /// Specifies, in seconds, after which time to schedule task execution.
     ///
     /// - Returns: Seconds.
-    func runAfter () -> Int
+    func runAfter () -> UInt
     
     /// Specifies an exact date, from which to schedule task execution.
     /// Just return nil if you don't need to specify exact date.

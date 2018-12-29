@@ -137,7 +137,7 @@ extension Cronner {
         
         guard let task = task else { return }
         
-        let date = Date().addingTimeInterval(TimeInterval(exactly: task.runAfter())!)
+        let date = Date().addingTimeInterval(TimeInterval(exactly: Int(task.runAfter()))!)
         var record = self.store.load(task.taskName) ?? ScheduleRecord(taskName: task.taskName, nextRun: date, runs: -1)
         
         // Sets next run shcedule and increment runs

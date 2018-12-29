@@ -11,9 +11,9 @@ struct TestTask: CronTask {
     var runImmediately: Bool
     
     let pointer: UnsafeMutablePointer<Int>
-    let after: Int
+    let after: UInt
     
-    init (taskName: String, runOnlyOnce: Bool, runImmediately: Bool, pointer: UnsafeMutablePointer<Int>, runAfter: Int) {
+    init (taskName: String, runOnlyOnce: Bool, runImmediately: Bool, pointer: UnsafeMutablePointer<Int>, runAfter: UInt) {
         self.taskName = taskName
         self.runOnlyOnce = runOnlyOnce
         self.runImmediately = runImmediately
@@ -26,7 +26,7 @@ struct TestTask: CronTask {
         self.pointer.pointee = self.pointer.pointee + 1
     }
     
-    func runAfter () -> Int {
+    func runAfter () -> UInt {
         return self.after
     }
     
