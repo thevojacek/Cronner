@@ -45,8 +45,8 @@ public class Cronner {
     /// - Parameters:
     ///   - checkTime: Determines, how often will Cronner check if task is scheduled to run, in seconds.
     ///   - store: Store to use, defaults to in memory store.
-    public init (withCheckTime checkTime: Int, withStore store: CronnerStore?) {
-        self.checkTime = checkTime
+    public init (withCheckTime checkTime: UInt, withStore store: CronnerStore?) {
+        self.checkTime = checkTime == 0 ? Int(1) : Int(checkTime)
         self.store = store ?? InMemoryStore()
     }
     

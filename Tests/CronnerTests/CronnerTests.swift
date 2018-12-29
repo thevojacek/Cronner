@@ -61,12 +61,12 @@ final class CronnerTests: XCTestCase {
         }
         
         // Tasks
-        let task_1 = TestTask(taskName: "task_1", runOnlyOnce: true, runImmediately: true, pointer: pointer_1, runAfter: 1)
-        let task_2 = TestTask(taskName: "task_2", runOnlyOnce: false, runImmediately: false, pointer: pointer_2, runAfter: 2)
-        let task_3 = TestTask(taskName: "task_3", runOnlyOnce: false, runImmediately: false, pointer: pointer_3, runAfter: 15)
+        let task_1 = TestTask(taskName: "task 1", runOnlyOnce: true, runImmediately: true, pointer: pointer_1, runAfter: 1)
+        let task_2 = TestTask(taskName: "task 2", runOnlyOnce: false, runImmediately: false, pointer: pointer_2, runAfter: 2)
+        let task_3 = TestTask(taskName: "task 3", runOnlyOnce: false, runImmediately: false, pointer: pointer_3, runAfter: 15)
         
         // Cronner
-        let cronner = Cronner(withCheckTime: 2, withStore: nil)
+        let cronner = Cronner(withCheckTime: UInt(2), withStore: nil)
         
         try! cronner.registerTask(task_1)
         try! cronner.registerTask(task_2)
