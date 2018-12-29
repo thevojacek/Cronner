@@ -1,8 +1,8 @@
 # Cronner
 
-Simple asynchronous cron task scheduler for Swift with straightforward interface.
+Simple **asynchronous** cron task scheduler for Swift with straightforward interface.
 All the tasks which you may register for scheduled execution are being executed asynchronously.
-For list of all options you may configure your tasks, see 'usage' section down below.
+For list of all options you may configure your tasks, see **usage** section down below.
 
 ## Usage
 
