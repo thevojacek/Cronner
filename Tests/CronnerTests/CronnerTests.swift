@@ -45,13 +45,13 @@ final class CronnerTests: XCTestCase {
         
         // Pointers initialization
         let pointer_1 = UnsafeMutablePointer<Int>.allocate(capacity: 1)
-        pointer_1.pointee = 0
+        pointer_1.initialize(to: 0)
         
         let pointer_2 = UnsafeMutablePointer<Int>.allocate(capacity: 1)
-        pointer_2.pointee = 0
+        pointer_2.initialize(to: 0)
         
         let pointer_3 = UnsafeMutablePointer<Int>.allocate(capacity: 1)
-        pointer_3.pointee = 0
+        pointer_3.initialize(to: 0)
         
         // Deallocation
         defer {
