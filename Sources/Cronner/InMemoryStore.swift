@@ -27,19 +27,19 @@ class InMemoryStore: CronnerStore {
     
     private var records = [String: ScheduleRecord]()
     
-    func save(_ record: ScheduleRecord) {
+    func save (_ record: ScheduleRecord) {
         self.records[record.taskName] = record
     }
     
-    func load(_ taskName: String) -> ScheduleRecord? {
+    func load (_ taskName: String) -> ScheduleRecord? {
         return self.records[taskName]
     }
     
-    func remove(_ taskName: String) {
+    func remove (_ taskName: String) {
         self.records.removeValue(forKey: taskName)
     }
     
-    func getAll() -> [ScheduleRecord] {
+    func loadAll () -> [ScheduleRecord] {
         return [ScheduleRecord](self.records.values)
     }
 }

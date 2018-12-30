@@ -30,7 +30,7 @@ public protocol CronnerStore {
     ///
     /// - Parameter record: Record to save.
     /// - Returns: Void.
-    func save (_ record: ScheduleRecord) -> Void // TODO: rename?
+    func save (_ record: ScheduleRecord) -> Void
     
     /// Loads scheduling record for a task, if exists.
     ///
@@ -41,7 +41,7 @@ public protocol CronnerStore {
     /// Loads all of the scheduling records.
     ///
     /// - Returns: Array of scheduling records.
-    func getAll () -> [ScheduleRecord]
+    func loadAll () -> [ScheduleRecord]
     
     /// Removes scheduling record for a specified task.
     ///

@@ -99,7 +99,7 @@ extension Cronner {
         
         let date = Date()
         
-        self.store.getAll().forEach { (record) in
+        self.store.loadAll().forEach { (record) in
             
             let task = self.tasks[record.taskName]
             
