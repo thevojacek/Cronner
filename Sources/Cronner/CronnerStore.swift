@@ -50,7 +50,7 @@ public protocol CronnerStore {
     func remove (_ taskName: String) -> Void
 }
 
-public struct ScheduleRecord: Encodable {
+public struct ScheduleRecord: Codable {
     public let taskName: String
     public var nextRun: Date
     public var runs: Int = -1
