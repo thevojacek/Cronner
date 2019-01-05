@@ -77,6 +77,13 @@ extension Cronner {
         self.tasks[taskName] = task
         self.scheduleTask(self.tasks[taskName]!)
     }
+
+    /// Removes task and it's scheduling record.
+    ///
+    /// - Parameter taskName: Name of the task to remove.
+    public func unregisterTask (_ taskName: String) {
+        self.removeTask(taskName)
+    }
     
     /// Resumes / starts the cronner job.
     public func resume () {
